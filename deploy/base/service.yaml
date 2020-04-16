@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: karyotype-backend-service
+spec:
+  ports:
+  - port: 8002
+    targetPort: 8000
+  selector:
+    app: karyotype-server-app
+  type: LoadBalancer
