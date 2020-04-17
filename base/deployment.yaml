@@ -19,7 +19,7 @@ spec:
         name: karyotype-server
         command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
         env:
         - name: MODEL_SERVER_URL
           value: "http://58.229.121.146:8083"
