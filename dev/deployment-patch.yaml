@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-      - name: karyotype-server
+        name: karyotype-server
         env:
         - name: MODEL_SERVER_URL
           value: "http://58.229.121.146:8083"
