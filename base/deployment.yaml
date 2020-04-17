@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: karyotype-server
 spec:
-  #replicas: 3
+  # replicas: 1
+  # revisionHistoryLimit: 3
+  # progressDeadlineSeconds: 30
   selector:
     matchLabels:
       app: karyotype-server
@@ -15,10 +17,9 @@ spec:
       containers:
       - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
         name: karyotype-server
-        # command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+        command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
-        - containerPort: 8000
-        #imagePullPolicy: IfNotPresent
+        - containerPort: 8080
         env:
         - name: MODEL_SERVER_URL
           value: "http://58.229.121.146:8083"
