@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: karyotype-server-app-deploy
+  name: karyotype-server
 spec:
   #replicas: 3
   selector:
     matchLabels:
-      app: karyotype-server-app
+      app: karyotype-server
   template:
     metadata:
       labels:
-        app: karyotype-server-app
+        app: karyotype-server
     spec:
       containers:
       #- image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
@@ -19,7 +19,7 @@ spec:
         # command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
         - containerPort: 8000
-        imagePullPolicy: IfNotPresent
+        #imagePullPolicy: IfNotPresent
         env:
         - name: MODEL_SERVER_URL
           value: "http://58.229.121.146:8083"
