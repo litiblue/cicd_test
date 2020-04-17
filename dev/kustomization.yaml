@@ -8,7 +8,5 @@ patchesStrategicMerge:
 - ./deployment-patch.yaml
 
 images:
-# - name: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server
-#   newTag: latest
-- name: alexmt/argocd-demo
-  newTag: 3824e3ce01af4947d4375c2d8fb22159d12e5c04
+- name: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server
+  newTag: latest

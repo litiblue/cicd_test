@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karyotype-client-app-deploy-prod
+spec:
+  #replicas: 3
+  selector:
+    matchLabels:
+      app: karyotype-client-app-prod
+  template:
+    metadata:
+      labels:
+        app: karyotype-client-app-prod
+    spec:
+      containers:
+      - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-client:latest
+        name: karyotype-client
+        imagePullPolicy: IfNotPresent

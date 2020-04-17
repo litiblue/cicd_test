@@ -13,8 +13,7 @@ spec:
         app: karyotype-server
     spec:
       containers:
-      #- image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
-      - image: alexmt/argocd-demo:f27903964ba8e31ad89c31379e300a35fe1632a3
+      - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
         name: karyotype-server
         # command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
