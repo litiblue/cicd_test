@@ -7,7 +7,7 @@ patchesStrategicMerge:
 
 images:
 - name: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server
-  newTag: "2625"
+  newTag: "2"
 - name: https://789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server
   newTag: "2620"
 resources:
